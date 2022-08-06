@@ -1,0 +1,32 @@
+1. What is the difference between JIT compiler and AOT compiler?
+
+JIT downloads the compiler and compiles code exactly before Displaying in the browser. 
+AOT has already complied with the code while building your application,so it doesn't have to compile at runtime. 
+ Loading in JIT is slower than the AOT because it needs to compile your application at runtime.
+
+ 2. Explain the advantages and disadvantages of each
+ 
+ Advantages of JIT compilation include:
+    1.JIT compilers need less memory usage.
+    2.JIT compilers run after a program starts.
+    3.Code optimization can be done while the code is running.
+    4.Any page faults can be reduced.
+    5.Code that is used together will be localized on the same page.
+    6.Can utilize different levels of optimization.
+
+Disadvantages of JIT compilation include:
+    1.Startup time can take a noticeable amount of time.
+    2.Heavy usage of cache memory.
+    3.Increases the level of complexity in a Java program.
+
+
+Advantages of AOT -
+    1.Faster download: - The Angular 2 app is already compiled so it is faster.
+    2.Faster Rendering: - If the app is not AOT compiled and the compilation process happens in the browser once the application is fully loaded. This has a wait time for all necessary components to be downloaded and then the time taken by the compiler to compile the app. With AOT compilation, this is optimized.
+    3.Lesser Http Requests: - It is supporting to the lazy loading. Actually, lazy loading is great concepts for sending HTTP request to the server. It is minimise the multiple requests for each associated html and css, there is a separate request goes to the server.
+    4.Detect error at build time: - In Angular 2, the compilation happens beforehand and most of the errors can be detected at the compile time and this process providing us a better application’s stability.
+
+Disadvantages of AOT -
+    1.AOT only works only with HTML and CSS and not for other file types. If required other file types that time we will need to follow the previous build step.
+    2.We need to maintain AOT version of bootstrap file.
+    3.We need to clean-up step before compiling.
