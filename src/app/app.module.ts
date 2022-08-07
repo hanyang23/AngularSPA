@@ -7,24 +7,28 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MovieComponent } from './public/movie/movie.component';
-import { MovieDatailsComponent } from './public/movie/movie-datails.component';
+import { MovieDetailsComponent } from './public/movie/movie-details.component';
 import { CastDetailsComponent } from './public/cast/cast-details.component';
 import { GenreComponent } from './public/genre/genre.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieComponent,
-    MovieDatailsComponent,
+    MovieDetailsComponent,
     CastDetailsComponent,
-    GenreComponent,
+    GenreComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CoreModule,
     SharedModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
